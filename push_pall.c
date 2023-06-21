@@ -13,7 +13,7 @@ void push_node(stack_t **head, unsigned int lcount)
 
 	if (context.arg)
 	{
-		i += (context.arg[0] == '-')
+		i += (context.arg[0] == '-');
 
 		while (context.arg[i] != '\0')
 		{
@@ -28,7 +28,7 @@ void push_node(stack_t **head, unsigned int lcount)
 			fprintf(stderr, "L%d: usage: push integer\n", lcount);
 			fclose(context.file);
 			free(context.content);
-			free_stack(*head);
+			free_all_nodes(*head);
 			exit(EXIT_FAILURE);
 		}
 	}
@@ -37,13 +37,13 @@ void push_node(stack_t **head, unsigned int lcount)
 		fprintf(stderr, "L%d: usage: push integer\n", lcount);
 		fclose(context.file);
 		free(context.content);
-		free_stack(*head);
+		free_all_nodes(*head);
 		exit(EXIT_FAILURE);
 	}
 
-	n = atoi(context.arg);
+	data = atoi(context.arg);
 	if (context.lifi == 0)
-		addnode(head, data);
+		add_node(head, data);
 	else
 		addqueue(head, data);
 }
