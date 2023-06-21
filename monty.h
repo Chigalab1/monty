@@ -9,7 +9,7 @@
 #include <stdlib.h>
 #include <sys/types.h>
 
-extern program_data_t context;
+extern prog_data_t context;
 
 
 typedef struct stack_s
