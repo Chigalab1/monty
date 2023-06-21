@@ -44,7 +44,7 @@ void free_all_nodes(stack_t *head);
 void mod(stack_t **head, unsigned int lcount);
 void pchar(stack_t **head, unsigned int lcount);
 void add_2h(stack_t **head, unsigned int lcount);
-
+void pstr(stack_t **head, unsigned int lcount);
 
 #endif
 
