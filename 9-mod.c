@@ -26,4 +26,17 @@ void mod(stack_t **head, unsigned int lcount)
 		free_all_nodes(*head);
 		exit(EXIT_FAILURE);
 	}
-
+	temp = *head;
+	if (temp->n = 0)
+	{
+		fprintf(stderr, "L%d: division by zero\n", counter);
+		fclose(context.file);
+		free(context.content);
+		free_all_nodes(*head);
+		exit(EXIT_FAILURE);
+	}
+	result = temp->next->n % temp->n;
+	temp->next->n = result;
+	*head = temp->next;
+	free(temp);
+}
