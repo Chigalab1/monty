@@ -45,6 +45,13 @@ void mod(stack_t **head, unsigned int lcount);
 void pchar(stack_t **head, unsigned int lcount);
 void add_2h(stack_t **head, unsigned int lcount);
 void pstr(stack_t **head, unsigned int lcount);
+void add_node(stack_t **head, int n);
+
+
+
+
+
+
 
 #endif
 
