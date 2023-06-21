@@ -32,4 +32,6 @@ typedef struct bus_s
 void push_node(stack_t **head, unsigned int lcount);
 void pall(stack_t **head, unsigned int lcount);
 void f_mul(stack_t **head, unsigned int counter);
+void free_all_nodes(stack_t *head);
+
 
