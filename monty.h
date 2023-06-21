@@ -10,8 +10,6 @@
 #include <stdlib.h>
 #include <sys/types.h>
 
-extern prog_data_t context;
-
 
 typedef struct stack_s
 {
@@ -21,13 +19,22 @@ typedef struct stack_s
 } stack_t;
 
 
-typedef struct bus_s
+typedef struct program_data
 {
         char *arg;
         FILE *file;
         char *content;
         int lifi;
 }  prog_data_t;
+
+extern prog_data_t context;
+
+typedef struct instruction_s
+{
+	char *opcode;
+	void (*f)(stack_t **stack, unsigned int line_number);
+} instruction_t;
+
 
 
 void push_node(stack_t **head, unsigned int lcount);
@@ -36,7 +43,7 @@ void mul(stack_t **head, unsigned int counter);
 void free_all_nodes(stack_t *head);
 void mod(stack_t **head, unsigned int lcount);
 void pchar(stack_t **head, unsigned int lcount);
-void add_node(stack_t **head, unsigned int lcount);
+void add_2h(stack_t **head, unsigned int lcount);
 
 
 #endif
