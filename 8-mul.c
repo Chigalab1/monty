@@ -1,12 +1,12 @@
 #include "monty.h"
 
 /**
- * f_mul - multiplies the top two elements of stack
+ * mul - multiplies the top two elements of stack
  * @head: double pointer to the head of the stack
  * @counter: line number of the opcode
  * Return: void
  */
-void f_mul(stack_t **head, unsigned int counter)
+void mul(stack_t **head, unsigned int counter)
 {
 	stack_t *temp;
 	int l = 0, result;
