@@ -30,5 +30,6 @@ typedef struct bus_s
 
 
 void push_node(stack_t **head, unsigned int lcount);
+void pall(stack_t **head, unsigned int lcount)
 
 
