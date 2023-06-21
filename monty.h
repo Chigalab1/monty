@@ -33,5 +33,5 @@ void push_node(stack_t **head, unsigned int lcount);
 void pall(stack_t **head, unsigned int lcount);
 void mul(stack_t **head, unsigned int counter);
 void free_all_nodes(stack_t *head);
-
+void mod(stack_t **head, unsigned int lcount);
 
