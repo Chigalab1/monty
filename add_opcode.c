@@ -15,7 +15,8 @@ void add_2h(stack_t **head, unsigned int lcount)
 
 	len = 0;
 	tmp_node = *head; /* Set tmp_node to the head of the stack */
-	for (; h; h = h->next)
+
+	for (; tmp_node; tmp_node = tmp_node->next)
 	{
 		len++;
 	}
@@ -25,7 +26,7 @@ void add_2h(stack_t **head, unsigned int lcount)
 		fprintf(stderr, "L%d: can't add, stack too short\n", lcount);
 		fclose(context.file);
 		free(context.content);
-		free_stack(*head);
+		free_all_nodes(*head);
 		exit(EXIT_FAILURE);
 	}
 
@@ -39,4 +40,3 @@ void add_2h(stack_t **head, unsigned int lcount)
 
 	free(tmp_node);
 }
-
