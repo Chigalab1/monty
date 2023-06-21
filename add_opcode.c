@@ -4,7 +4,7 @@
  * add_2h -function that adds the top two elements of a stack
  *
  * @head: pointer to the stack head
- * @lcount: line_number
+ * @lcount: Number of elements in the stack
 */
 
 void add_2h(stack_t **head, unsigned int lcount)
@@ -40,3 +40,41 @@ void add_2h(stack_t **head, unsigned int lcount)
 
 	free(tmp_node);
 }
+
+
+
+
+/**
+ * add_node - a function that add node to the head of stack
+ *
+ * @head: pointer to head of the stack
+ * @n: element in new node to be added
+ */
+
+void add_node(stack_t **head, int n)
+{
+
+	stack_t *new_node; /* pointer to new node */
+	stack_t *curr_node; /* maintain a reference to the current top node */
+
+	curr_node = *head;
+	new_node = malloc(sizeof(stack_t));
+
+	if (!new_node)
+	{ printf("Error\n");
+		exit(0); }
+
+	if (curr_node)
+	{
+		curr_node->prev = new_node;
+	}
+
+	new_node->n = n;
+
+	new_node->next = *head;
+
+	new_node->prev = NULL;
+
+	*head = new_node;
+}
+
