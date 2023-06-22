@@ -27,7 +27,7 @@ void _div(stack_t **head, unsigned int lcount)
 		exit(EXIT_FAILURE);
 	}
 	temp = *head;
-	if (temp->n = 0)
+	if (temp->n == 0)
 	{
 		fprintf(stderr, "L%d: division by zero\n", lcount);
 		fclose(context.file);
