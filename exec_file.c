@@ -37,7 +37,7 @@ int exec_file(char *content, stack_t **stack, unsigned int lcount, FILE *file)
 	}
 	if (oop && option[j].opcode == NULL)
 	{
-		fprintf(stderr, "L%d: unknown instruction %s\n", counter, oop);
+		fprintf(stderr, "L%d: unknown instruction %s\n", lcount, oop);
 		fclose(file);
 		free(content);
 		free_all_nodes(*stack);

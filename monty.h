@@ -78,5 +78,6 @@ void _stack(stack_t **head, unsigned int lcount);
 void _queue(stack_t **head, unsigned int lcount);
 void add_queue(stack_t **head, int n);
 int exec_file(char *content, stack_t **stack, unsigned int lcount, FILE *file);
+void _swap(stack_t **head, unsigned int lcount);
 
 #endif
