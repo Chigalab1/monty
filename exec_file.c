@@ -22,4 +22,26 @@ int exec_file(char *content, stack_t **stack, unsigned int lcount, FILE *file)
 	char *oop;
 
 	oop = strtok(content, "\n\t");
-	if 
+	if (oop && oop[0] == '#')
+		return (0);
+	context.arg = strtok(NULL, "\n\t");
+
+	while (option[j].opcode && oop)
+	{
+		if (strcmp(oop, option[j].opcode) == 0)
+		{
+			option[j].f(stack, lcount);
+			return (0);
+		}
+		j++;
+	}
+	if (oop && option[j].opcode == NULL)
+	{
+		fprintf(stderr, "L%d: unknown instruction %s\n", counter, oop);
+		fclose(file);
+		free(content);
+		free_all_nodes(*stack);
+		exit(EXIT_FAILURE);
+	}
+	return (1);
+}
