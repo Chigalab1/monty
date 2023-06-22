@@ -53,7 +53,7 @@ void _div(stack_t **head, unsigned int lcount);
 void nop(stack_t **head, unsigned int lcount);
 void stack(stack_t **head, unsigned int lcount);
 void queue(stack_t **head, unsigned int lcount);
-
+void add_queue(stack_t **head, int n);
 
 
 #endif

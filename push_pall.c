@@ -45,7 +45,7 @@ void push_node(stack_t **head, unsigned int lcount)
 	if (context.lifi == 0)
 		add_node(head, data);
 	else
-		addqueue(head, data);
+		add_queue(head, data);
 }
 
 
