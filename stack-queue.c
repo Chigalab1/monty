@@ -42,4 +42,22 @@ void add_queue(stack_t **head, int n)
 	{
 		printf("Error\n");
 	}
+	new_n->n = n;
+	new_n->next = NULL;
 
+	if (res)
+	{
+		while (res->next)
+			res = res->next;
+	}
+	if (!res)
+	{
+		*head = new_n;
+		new_n->prev = NULL;
+	}
+	else
+	{
+		res->next = new_n;
+		new_n->prev = res;
+	}
+}
