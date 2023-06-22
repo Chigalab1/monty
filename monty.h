@@ -78,6 +78,6 @@ void nop(stack_t **head, unsigned int lcount);
 void stack(stack_t **head, unsigned int lcount);
 void queue(stack_t **head, unsigned int lcount);
 void add_queue(stack_t **head, int n);
-
+int exec_file(char *content, stack_t **stack, unsigned int lcount, FILE *file);
 
 #endif
