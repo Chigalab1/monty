@@ -23,3 +23,8 @@ void div(stack_t **head, unsigned int lcount)
 		fprintf(stderr, "L%d: can't div, stack too short\n", lcount);
 		fclose(context.file);
 		free(context.content);
+		free_all_nodes(*head);
+		exit(EXIT_FAILURE);
+	}
+	temp = *head;
+
