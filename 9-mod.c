@@ -1,13 +1,13 @@
 #include "monty.h"
 
 /**
- * mod - computes the rest of the division of the second top
+ * _mod - computes the rest of the division of the second top
  * element of the stack by the top element of the stack.
  * @head: double pointer to the head of stack
  * @lcount: line number
  * Return: void
  */
-void mod(stack_t **head, unsigned int lcount)
+void _mod(stack_t **head, unsigned int lcount)
 {
 	stack_t *temp;
 	int l = 0, result;

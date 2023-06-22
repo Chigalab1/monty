@@ -44,7 +44,6 @@ typedef struct program_data
 }  prog_data_t;
 
 extern prog_data_t context;
-
 /**
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
@@ -62,21 +61,21 @@ typedef struct instruction_s
 
 
 void push_node(stack_t **head, unsigned int lcount);
-void pall(stack_t **head, unsigned int lcount);
-void mul(stack_t **head, unsigned int counter);
+void _pall(stack_t **head, unsigned int lcount);
+void _mul(stack_t **head, unsigned int counter);
 void free_all_nodes(stack_t *head);
-void mod(stack_t **head, unsigned int lcount);
-void pchar(stack_t **head, unsigned int lcount);
+void _mod(stack_t **head, unsigned int lcount);
+void _pchar(stack_t **head, unsigned int lcount);
 void add_2h(stack_t **head, unsigned int lcount);
-void pstr(stack_t **head, unsigned int lcount);
+void _pstr(stack_t **head, unsigned int lcount);
 void add_node(stack_t **head, int n);
 void rotl_stack(stack_t **head, __attribute__((unused)) unsigned int lcount);
 void rotr_stack(stack_t **head, __attribute__((unused)) unsigned int lcount);
 void _pop(stack_t **head, unsigned int lcount);
 void _div(stack_t **head, unsigned int lcount);
-void nop(stack_t **head, unsigned int lcount);
-void stack(stack_t **head, unsigned int lcount);
-void queue(stack_t **head, unsigned int lcount);
+void _nop(stack_t **head, unsigned int lcount);
+void _stack(stack_t **head, unsigned int lcount);
+void _queue(stack_t **head, unsigned int lcount);
 void add_queue(stack_t **head, int n);
 int exec_file(char *content, stack_t **stack, unsigned int lcount, FILE *file);
 

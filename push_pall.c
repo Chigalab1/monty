@@ -51,24 +51,24 @@ void push_node(stack_t **head, unsigned int lcount)
 
 
 /**
- * pall - function that prints all elements of a stack
+ * _pall - function that prints all elements of a stack
  *
  * @head: pointer to first node
  * @lcount: Number of elements in the stack
  */
 
-void pall(stack_t **head, unsigned int lcount)
+void _pall(stack_t **head, unsigned int lcount)
 {
-        stack_t *tmp_node;
-        (void)lcount;
+	stack_t *tmp_node;
+	(void)lcount;
 
-        tmp_node = *head;
-        if (tmp_node == NULL)
-                return;
+	tmp_node = *head;
+	if (tmp_node == NULL)
+		return;
 
-        while (tmp_node)
-        {
-                printf("%d\n", tmp_node->n);
-                tmp_node = tmp_node->next;
-        }
+	while (tmp_node)
+	{
+		printf("%d\n", tmp_node->n);
+		tmp_node = tmp_node->next;
+	}
 }

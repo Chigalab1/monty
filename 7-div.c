@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * div -  divides the second top element of the stack by the top
+ * _div -  divides the second top element of the stack by the top
  * element of the stack
  * @head: double pointer to the head of the stack
  * @lcount: line number
@@ -35,7 +35,7 @@ void _div(stack_t **head, unsigned int lcount)
 		free_all_nodes(*head);
 		exit(EXIT_FAILURE);
 	}
-	res = temp->next->n /temp->n;
+	res = temp->next->n / temp->n;
 	temp->next->n = res;
 	*head = temp->next;
 	free(temp);

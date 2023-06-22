@@ -16,7 +16,7 @@ void rotl_stack(stack_t **head,  __attribute__((unused)) unsigned int lcount)
 	}
 	res = (*head)->next;
 	res->prev = NULL;
-	
+
 	while (temp->next != NULL)
 	{
 		temp = temp->next;

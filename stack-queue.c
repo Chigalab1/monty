@@ -1,11 +1,11 @@
 #include "monty.h"
 /**
- * stack - implement the stack opcode
+ * _stack - implement the stack opcode
  * @head: pointer to the head of the stack
  * @lcount: line number
  * Return: void
  */
-void stack(stack_t **head, unsigned int lcount)
+void _stack(stack_t **head, unsigned int lcount)
 {
 	(void)head;
 	(void)lcount;
@@ -13,12 +13,12 @@ void stack(stack_t **head, unsigned int lcount)
 }
 
 /**
- * queue - implements the queue opcode
+ * _queue - implements the queue opcode
  * @head: double pointer to the head of the stack
  * @lcount: line number
  * Return: void
  */
-void queue(stack_t **head, unsigned int lcount)
+void _queue(stack_t **head, unsigned int lcount)
 {
 	(void)head;
 	(void)lcount;

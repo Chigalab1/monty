@@ -1,12 +1,12 @@
 #include "monty.h"
 
 /**
- * pchar - prints the char at the top of the stack
+ * _pchar - prints the char at the top of the stack
  * @head: double pointer to the stackm head
  * @lcount: line number
  * Return: void
  */
-void pchar(stack_t **head, unsigned int lcount)
+void _pchar(stack_t **head, unsigned int lcount)
 {
 	stack_t *temp;
 
