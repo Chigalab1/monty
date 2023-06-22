@@ -50,7 +50,7 @@ void rotl_stack(stack_t **head, __attribute__((unused)) unsigned int lcount);
 void rotr_stack(stack_t **head, __attribute__((unused)) unsigned int lcount);
 void _pop(stack_t **head, unsigned int lcount);
 void div(stack_t **head, unsigned int lcount);
-
+void nop(stack_t **head, unsigned int lcount);
 
 
 
