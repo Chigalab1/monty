@@ -7,7 +7,7 @@
  * @lcount: line number
  * Return: void
  */
-void div(stack_t **head, unsigned int lcount)
+void _div(stack_t **head, unsigned int lcount)
 {
 	stack_t *temp;
 	int l = 0, res;
@@ -35,7 +35,7 @@ void div(stack_t **head, unsigned int lcount)
 		free_all_nodes(*head);
 		exit(EXIT_FAILURE);
 	}
-	res = temp-next->n /temp->n;
+	res = temp->next->n /temp->n;
 	temp->next->n = res;
 	*head = temp->next;
 	free(temp);

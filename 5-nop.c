@@ -8,6 +8,6 @@
  */
 void nop(stack_t **head, unsigned int lcount)
 {
-	(void) counter;
+	(void) lcount;
 	(void) head;
 }
