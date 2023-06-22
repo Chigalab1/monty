@@ -29,7 +29,7 @@ void mod(stack_t **head, unsigned int lcount)
 	temp = *head;
 	if (temp->n == 0)
 	{
-		fprintf(stderr, "L%d: division by zero\n", counter);
+		fprintf(stderr, "L%d: division by zero\n", lcount);
 		fclose(context.file);
 		free(context.content);
 		free_all_nodes(*head);
