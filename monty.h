@@ -41,7 +41,7 @@ typedef struct program_data
 	FILE *file;
 	char *content;
 	int lifi;
-}  prog_data_t;
+} prog_data_t;
 
 extern prog_data_t context;
 /**
