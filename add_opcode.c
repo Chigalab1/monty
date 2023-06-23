@@ -16,8 +16,9 @@ void add_2h(stack_t **head, unsigned int lcount)
 	len = 0;
 	tmp_node = *head; /* Set tmp_node to the head of the stack */
 
-	for (; tmp_node; tmp_node = tmp_node->next)
+	while (tmp_node)
 	{
+		tmp_node = tmp_node->next;
 		len++;
 	}
 
