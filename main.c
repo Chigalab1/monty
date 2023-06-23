@@ -2,6 +2,7 @@
 #include <stdio.h>
 
 prog_data_t context = {NULL, NULL, NULL, 0};
+prog_data_t context;
 /**
  * main - code interpreter
  * @argc: argument count
