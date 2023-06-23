@@ -10,6 +10,7 @@
 #include <sys/types.h>
 
 #define READ_BUF_SIZE 1024
+
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -44,6 +45,7 @@ typedef struct program_data
 } prog_data_t;
 
 extern prog_data_t context;
+
 /**
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
