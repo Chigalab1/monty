@@ -47,6 +47,9 @@ typedef struct program_data
 
 extern prog_data_t context;
 
+/*#define INIT_CONTEXT() \
+	prog_data_t context = {NULL, NULL, NULL, 0} __attribute__((__unused__))*/
+
 /**
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
