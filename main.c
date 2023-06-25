@@ -10,8 +10,10 @@ prog_data_t context = {NULL, NULL, NULL, 0};
  * @argv: arg vector
  * Return: 0
  */
+
 int main(int argc, char *argv[])
 {
+	/*INIT_CONTEXT();*/
 	char *content;
 	FILE *file;
 	size_t size = 0;
@@ -24,6 +26,7 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
+
 	file = fopen(argv[1], "r");
 	context.file = file;
 	if (!file)
@@ -36,7 +39,6 @@ int main(int argc, char *argv[])
 	{
 		content = NULL;
 		r_line = getline(&content, &size, file);
-		context.content = content;
 		lcount++;
 		if (r_line > 0)
 		{
@@ -48,3 +50,4 @@ int main(int argc, char *argv[])
 	fclose(file);
 	return (0);
 }
+
